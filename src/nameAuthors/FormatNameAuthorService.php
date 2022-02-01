@@ -40,7 +40,7 @@ class FormatNameAuthorService
             $prevName = $names[count($names) - 2];
 
             unset($names[count($names) - 2]);
-            unset($names[count($names)]);
+            unset($names[array_key_last($names)]);
 
             $nameFormatted = strtoupper($prevName) . ' ' . strtoupper($lastName) . ', ';
             foreach ($names as $key => $name) {
@@ -51,5 +51,15 @@ class FormatNameAuthorService
 
           return $nameFormatted;
         }
+
+        unset($names[array_key_last($names)]);
+        $nameFormatted = strtoupper($lastName) . ', ';
+        foreach ($names as $key => $name) {
+            $nameFormatted .= ucfirst(strtolower($name));
+
+            $nameFormatted .= ($key == count($names) - 1) ? '' : ' ';
+        }
+
+        return $nameFormatted;
     }
 }

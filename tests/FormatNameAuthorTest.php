@@ -19,5 +19,6 @@ test('Test Format Name Author', function ($name, $expect) {
 })->with([
     ['ferreira', 'FERREIRA'],
     ['lucas ferreira junior', 'FERREIRA JUNIOR, Lucas'],
-    ['lucas BERNARDINELLI ferreira sobrinho', 'FERREIRA SOBRINHO, Lucas Bernardinelli']
+    ['lucas BERNARDINELLI ferreira sobrinho', 'FERREIRA SOBRINHO, Lucas Bernardinelli'],
+    ['lucas BERNARDINELLI ferreira', 'FERREIRA, Lucas Bernardinelli']
 ])->group('name-author');
