@@ -2,6 +2,8 @@
 
 namespace dojo\nameAuthors;
 
+use dojo\nameAuthors\support\FamilyName;
+
 class FormatNameAuthorService
 {
 
@@ -18,7 +20,7 @@ class FormatNameAuthorService
             return strtoupper($lastName);
         }
 
-        $lastName = $this->verifyLastName();
+        return $this->mountName($lastName, $names);
 
     }
 
@@ -32,8 +34,22 @@ class FormatNameAuthorService
         return end($names);
     }
 
-    private function mountName(array $names, $lastName)
+    private function mountName($lastName, $names)
     {
-        return "{$lastName}";
+        if (in_array($lastName, FamilyName::getAll()) && count($names) > 2) {
+            $prevName = $names[count($names) - 2];
+
+            unset($names[count($names) - 2]);
+            unset($names[count($names)]);
+
+            $nameFormatted = strtoupper($prevName) . ' ' . strtoupper($lastName) . ', ';
+            foreach ($names as $key => $name) {
+                $nameFormatted .= ucfirst($name);
+
+                $nameFormatted .= ($key == count($names) - 1) ? '' : ' ';
+            }
+
+          return $nameFormatted;
+        }
     }
 }

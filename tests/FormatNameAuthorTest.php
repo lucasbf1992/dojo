@@ -23,3 +23,13 @@ test('Test Format One Name Author', function () {
 
     expect('FERREIRA')->toBe($nameFormatted);
 })->group('name-author-format');
+
+test('Test Format Name Author Junior', function () {
+    $name = 'lucas ferreira junior';
+
+    $formatNameService = new FormatNameAuthorService();
+
+    $nameFormatted = $formatNameService->format($name);
+
+    expect($nameFormatted)->toBe('FERREIRA JUNIOR, Lucas');
+})->group('name-author-format');

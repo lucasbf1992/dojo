@@ -1,5 +1,6 @@
 <?php
 
+namespace dojo\nameAuthors\support;
 
 class FamilyName
 {
@@ -11,7 +12,7 @@ class FamilyName
     const SOBRINHO = 'sobrinho';
     const SOBRINHA = 'sobrinha';
 
-    public function getAll()
+    public static function getAll(): array
     {
         return [
             self::JUNIOR,
