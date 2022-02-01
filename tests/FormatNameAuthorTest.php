@@ -18,5 +18,6 @@ test('Test Format Name Author', function ($name, $expect) {
     expect($nameFormatted)->toBe($expect);
 })->with([
     ['ferreira', 'FERREIRA'],
-    ['lucas ferreira junior', 'FERREIRA JUNIOR, Lucas']
+    ['lucas ferreira junior', 'FERREIRA JUNIOR, Lucas'],
+    ['lucas BERNARDINELLI ferreira sobrinho', 'FERREIRA SOBRINHO, Lucas Bernardinelli']
 ])->group('name-author');

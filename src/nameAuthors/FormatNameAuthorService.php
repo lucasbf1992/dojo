@@ -44,7 +44,7 @@ class FormatNameAuthorService
 
             $nameFormatted = strtoupper($prevName) . ' ' . strtoupper($lastName) . ', ';
             foreach ($names as $key => $name) {
-                $nameFormatted .= ucfirst($name);
+                $nameFormatted .= ucfirst(strtolower($name));
 
                 $nameFormatted .= ($key == count($names) - 1) ? '' : ' ';
             }
