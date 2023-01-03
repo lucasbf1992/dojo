@@ -1,6 +1,6 @@
 <?php
 
-namespace app\nameAuthors\support;
+namespace app\nameAuthors\Support;
 
 class FamilyName
 {

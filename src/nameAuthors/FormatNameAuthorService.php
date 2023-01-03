@@ -2,7 +2,7 @@
 
 namespace app\nameAuthors;
 
-use app\nameAuthors\support\FamilyName;
+use app\nameAuthors\Support\FamilyName;
 
 class FormatNameAuthorService
 {
