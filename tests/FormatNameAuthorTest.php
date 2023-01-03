@@ -1,6 +1,6 @@
 <?php
 
-use dojo\nameAuthors\FormatNameAuthorService;
+use app\nameAuthors\FormatNameAuthorService;
 
 test('Test Exception', function () {
     $formatNameService = new FormatNameAuthorService();

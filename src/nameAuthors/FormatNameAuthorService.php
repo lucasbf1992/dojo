@@ -1,8 +1,8 @@
 <?php
 
-namespace dojo\nameAuthors;
+namespace app\nameAuthors;
 
-use dojo\nameAuthors\support\FamilyName;
+use app\nameAuthors\support\FamilyName;
 
 class FormatNameAuthorService
 {

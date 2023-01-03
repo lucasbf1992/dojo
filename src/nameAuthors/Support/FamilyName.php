@@ -1,6 +1,6 @@
 <?php
 
-namespace dojo\nameAuthors\support;
+namespace app\nameAuthors\support;
 
 class FamilyName
 {
