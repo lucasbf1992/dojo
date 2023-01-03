@@ -5,3 +5,4 @@
 Lista de exercícios para praticar.
 
 * Formatar nome de autores.
+* Converter número romano para inteiro.
